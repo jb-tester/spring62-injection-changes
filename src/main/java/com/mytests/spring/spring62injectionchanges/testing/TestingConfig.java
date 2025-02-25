@@ -34,4 +34,9 @@ public class TestingConfig {
     public FourthBeanToOverride fourthBeanToOverride() {
         return new FourthBeanToOverride("dev");
     }
+
+    @Bean
+    public SixthBeanToOverride sixthBeanToOverride() {
+        return new SixthBeanToOverride("dev");
+    }
 }

@@ -1,8 +1,6 @@
 package com.mytests.spring.spring62injectionchanges;
 
-import com.mytests.spring.spring62injectionchanges.testing.FirstBeanToOverride;
-import com.mytests.spring.spring62injectionchanges.testing.SecondBeanToOverride;
-import com.mytests.spring.spring62injectionchanges.testing.ZeroBeanToOverride;
+import com.mytests.spring.spring62injectionchanges.testing.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -53,4 +51,26 @@ public class TestBeanAnnotationTests {
     void testTestBeanOverrideByName() {
         assertThat(bean2.getId()).isEqualTo("test");
     }
+
+    // no bean to override exists - the test bean is created
+    // Spring Debugger doesn't find its DeclaredIn source ("Auto Configuration" is displayed)
+    @TestBean(enforceOverride = false)
+    FifthBeanToOverride testBean5;
+
+    static FifthBeanToOverride testBean5(){
+        return new FifthBeanToOverride("test");
+    }
+    @Test
+    void testTestBeanOverrideEnforceOverride() {
+        assertThat(testBean5.getId()).isEqualTo("test");
+    }
+
+    // static method that overrides bean is located in the external class
+  @TestBean(methodName = "com.mytests.spring.spring62injectionchanges.testing.SixthBeanOverriding#testBean6")
+  SixthBeanToOverride testBean6;
+
+  @Test
+   void testTestBeanOverrideMethodName() {
+     assertThat(testBean6.getId()).isEqualTo("test");
+   }
 }
