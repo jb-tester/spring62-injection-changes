@@ -15,4 +15,8 @@ public class SecondBeanToOverride {
     public SecondBeanToOverride(String id) {
         this.id = id;
     }
+
+    public String getName() {
+        return "second";
+    }
 }

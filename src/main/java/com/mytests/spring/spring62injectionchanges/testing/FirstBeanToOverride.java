@@ -11,8 +11,10 @@ public class FirstBeanToOverride {
     }
 
     private final String id;
-
     public FirstBeanToOverride(String id) {
         this.id = id;
+    }
+    public String getName() {
+        return "first";
     }
 }

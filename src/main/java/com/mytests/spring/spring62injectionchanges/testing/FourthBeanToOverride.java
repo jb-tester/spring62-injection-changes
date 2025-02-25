@@ -15,4 +15,8 @@ public class FourthBeanToOverride {
     public FourthBeanToOverride(String id) {
         this.id = id;
     }
+
+    public String getName() {
+        return "fourth";
+    }
 }
