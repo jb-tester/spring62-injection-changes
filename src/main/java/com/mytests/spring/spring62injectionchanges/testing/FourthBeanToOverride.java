@@ -11,12 +11,17 @@ public class FourthBeanToOverride {
     }
 
     private final String id;
+    private String name = "fourth";
 
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return this.name;
+    }
     public FourthBeanToOverride(String id) {
         this.id = id;
     }
 
-    public String getName() {
-        return "fourth";
-    }
+
 }

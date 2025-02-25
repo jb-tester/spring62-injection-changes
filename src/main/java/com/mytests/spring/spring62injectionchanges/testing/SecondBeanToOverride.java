@@ -16,7 +16,12 @@ public class SecondBeanToOverride {
         this.id = id;
     }
 
+    private String name = "second";
+
+    public void setName(String name) {
+        this.name = name;
+    }
     public String getName() {
-        return "second";
+        return this.name;
     }
 }

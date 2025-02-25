@@ -15,7 +15,12 @@ public class ThirdBeanToOverride {
     public ThirdBeanToOverride(String id) {
         this.id = id;
     }
+    private String name = "third";
+
+    public void setName(String name) {
+        this.name = name;
+    }
     public String getName() {
-        return "third";
+        return this.name;
     }
 }
