@@ -7,6 +7,10 @@ import org.springframework.context.annotation.Configuration;
 public class TestingConfig {
 
     @Bean
+    public ZeroBeanToOverride zeroBeanToOverride() {
+        return new ZeroBeanToOverride("dev");
+    }
+    @Bean
     public FirstBeanToOverride firstBeanToOverride1() {
         return new FirstBeanToOverride("dev");
     }
