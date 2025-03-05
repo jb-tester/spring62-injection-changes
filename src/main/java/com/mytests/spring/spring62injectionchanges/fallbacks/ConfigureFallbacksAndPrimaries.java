@@ -43,6 +43,7 @@ public class ConfigureFallbacksAndPrimaries {
     public Bean2 mybean20() {
         return new Bean2("mybean20: i don't have @Primary annotation");
     }
+
     @Bean//(name = "bean2")
     @Primary
     public Bean2 mybean21() {

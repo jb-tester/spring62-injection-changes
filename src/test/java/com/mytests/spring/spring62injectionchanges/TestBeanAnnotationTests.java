@@ -1,7 +1,9 @@
 package com.mytests.spring.spring62injectionchanges;
 
+import com.mytests.spring.spring62injectionchanges.fallbacks.beans.Bean3;
 import com.mytests.spring.spring62injectionchanges.testing.*;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.bean.override.convention.TestBean;

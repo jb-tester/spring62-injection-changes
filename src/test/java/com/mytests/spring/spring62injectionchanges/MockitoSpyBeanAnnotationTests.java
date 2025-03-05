@@ -58,6 +58,6 @@ public class MockitoSpyBeanAnnotationTests {
     void testFourthBeanMocking() {
         Mockito.doReturn("mockedValue").when(fourthBeanToOverride).getName();
         Assertions.assertThat(fourthBeanToOverride.getName()).isEqualTo("mockedValue");
-       Assertions.assertThat(fourthBeanToOverride.getId()).isEqualTo("dev");
+        Assertions.assertThat(fourthBeanToOverride.getId()).isEqualTo("dev");
     }
 }
