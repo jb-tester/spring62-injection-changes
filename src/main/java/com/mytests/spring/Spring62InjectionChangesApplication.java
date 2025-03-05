@@ -39,7 +39,10 @@ public class Spring62InjectionChangesApplication {
                 injectListOfSingleBoundGenericInConstructorByTypeBar.displayMethod();
                 injectListOfListOfGenerics.displayMethod();
                 System.out.println("-- primary/fallback/defaultCandidate: ");
-                injectPrimaryBeans.displayBeans();
+                System.out.println("non-qualified injection (use defaults):");
+                injectPrimaryBeans.displayDefaultBeans();
+                System.out.println("injection by name (use specific beans instead of defaults) ");
+                injectPrimaryBeans.displayByNameBeans();
                 System.out.println(" -- SpEL indexing: ");
                 configureSPEL.displayMethod();
                 System.out.println("--------------------------------------");
