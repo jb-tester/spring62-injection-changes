@@ -9,7 +9,7 @@ public class InjectMultiBoundGenericsInConstructorByTypeFooBarAndName<T extends 
 
     final T service;
 
-    // should navigate to fooBar1 - matching by type and parameter name
+    // should navigate to fooBar1 - matching by type and parameter name; ok!
     public InjectMultiBoundGenericsInConstructorByTypeFooBarAndName(T fooBar1) {
         this.service = fooBar1;
     }

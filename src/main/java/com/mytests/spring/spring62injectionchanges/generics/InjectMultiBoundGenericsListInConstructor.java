@@ -12,7 +12,7 @@ public class InjectMultiBoundGenericsListInConstructor {
     StringBuffer rez = new StringBuffer();
 
 
-    // should inject both fooBar1 and fooBar2 - by type
+    // should inject both fooBar1 and fooBar2 - by type; ok!
     @Autowired
     public <T extends ServiceFoo & ServiceBar> InjectMultiBoundGenericsListInConstructor(List<T> impls) {
         impls.forEach(s -> {

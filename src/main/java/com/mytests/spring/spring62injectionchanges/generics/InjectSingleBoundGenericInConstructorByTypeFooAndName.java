@@ -7,6 +7,7 @@ public class InjectSingleBoundGenericInConstructorByTypeFooAndName<T extends Ser
 
     final T fooService;
 
+    // should navigate to foo1 - matching by type and parameter name; ok!
     public InjectSingleBoundGenericInConstructorByTypeFooAndName(final T foo1) {
         this.fooService = foo1;
     }

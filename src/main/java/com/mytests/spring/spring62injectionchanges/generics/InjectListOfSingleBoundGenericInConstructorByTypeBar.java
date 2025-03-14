@@ -8,7 +8,8 @@ import java.util.List;
 public class InjectListOfSingleBoundGenericInConstructorByTypeBar<T extends ServiceBar> {
     
     final List<T> barServices;
-    
+
+    // should navigate to all beans of Bar type - ok!
     public InjectListOfSingleBoundGenericInConstructorByTypeBar(List<T> bars) {
         this.barServices = bars;
     }
