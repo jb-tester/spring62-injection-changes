@@ -18,7 +18,7 @@ public class NestedGenericsConfig<T extends ServiceBar> {
 
     // no injected beans found
     // navigation to bean injection point doesn't work
-    @Bean
+    @Bean @Qualifier("qualifiedBarList")
     public List<T> qualifiedBarList(@Qualifier("b_qualifier") List<T> bars) {
         return bars;
     }

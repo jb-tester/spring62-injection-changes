@@ -12,9 +12,10 @@ public class InjectListOfListOfBoundedTypes<T extends ServiceBar> {
     private final List<List<T>> barList;
     private final List<List<T>> qualifiedBarList;
 
-    // no navigation to injected beans
+    // no navigation to injected beans in case of @Qualifier
     // false error for qualifier
-    public InjectListOfListOfBoundedTypes(List<List<T>> barList, @Qualifier("qualifiedBarList") List<List<T>> qualifiedBarList) {
+    public InjectListOfListOfBoundedTypes(List<List<T>> barList,
+                                          @Qualifier("qualifiedBarList") List<List<T>> qualifiedBarList) {
         this.barList = barList;
         this.qualifiedBarList = qualifiedBarList;
     }
